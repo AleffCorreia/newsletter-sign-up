@@ -1,60 +1,3 @@
-/* fonts */
-@font-face {
-    font-family: Roboto-Bold;
-    src: local(Roboto), url(../fonts/Roboto-Bold.ttf);
-}
-
-@font-face {
-    font-family: Roboto-Regular;
-    src: local(Roboto), url(../fonts/Roboto-Regular.ttf);
-}
-
-/* Variábles */
-:root {
-    --primary-color: hsl(235, 18%, 26%);
-    --title-color: hsl(229, 30%, 17%);
-    --text-color: hsl(240, 7%, 28%);
-    --danger-color: hsl(5, 100%, 95%);
-}
-
-/* Reset CSS */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
-/* base */
-body {
-    background-color: var(--primary-color);
-    font-family: Roboto-Regular;
-    font-weight: 400;
-    font-size: 1.2rem;
-    color: var(--text-color);
-}
-
-/* reusable css */
-.grid {
-    display: grid;
-    gap: 1.5rem;
-}
-
-.container {
-    max-width: 1024px;
-    margin-inline: 1.5rem;
-}
 
 /* main */
 .wrapper{
@@ -82,10 +25,7 @@ body {
     margin-bottom: 2rem;
 }
 
-.info_title{
-    color: var(--title-color);
-    font-size: 2.6rem;
-}
+
 
 .info_list{
     margin-bottom: 20px;
@@ -107,11 +47,18 @@ body {
     gap: .55rem;
 }
 
+.input_labels{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
 .form_singup-label{
     color:var(--title-color);
     font-family: Roboto-Bold;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: .8rem;
 }
 .form_singup-input{
     padding: 15px;
@@ -119,21 +66,36 @@ body {
     border-radius: 8px;
 
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .form_singup-input:focus{
-    outline: solid hsl(4, 100%, 67%);
+    outline: none;
 }
 
-.form_singup-button{
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    color: #fff;
-    background-color: var(--title-color);
-    font-family: Roboto-Bold;
+
+
+#error_message{
+    color: #D26F69;
+    display: none;
+   
+
 }
+
+.bg_error{
+    background: #FFE8E6;
+    outline-width: .1rem;
+    outline-style: solid;
+    outline-color: #D26F69;
+    color: #D26F69;
+   
+    
+}
+
+
+
+
+
 
 /* @media querys */
 @media screen and (min-width: 767px){

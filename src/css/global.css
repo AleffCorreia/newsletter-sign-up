@@ -1,0 +1,80 @@
+/* fonts */
+@font-face {
+    font-family: Roboto-Bold;
+    src: local(Roboto), url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: local(Roboto), url(../fonts/Roboto-Regular.ttf);
+}
+
+/* Variábles */
+:root {
+    --primary-color: hsl(235, 18%, 26%);
+    --title-color: hsl(229, 30%, 17%);
+    --text-color: hsl(240, 7%, 28%);
+    --danger-color: hsl(5, 100%, 95%);
+}
+
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* base */
+body {
+    background-color: var(--primary-color);
+    font-family: Roboto-Regular;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+/* reusable css */
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    
+}
+
+.container {
+    max-width: 1024px;
+    margin-inline: 1.5rem;
+}
+
+.app_title{
+    color: var(--title-color);
+    font-size: 2.6rem;
+}
+
+.primary_button{
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    color: #fff;
+    background-color: var(--title-color);
+    font-family: Roboto-Bold;
+
+    cursor: pointer;
+   
+}
+
+.primary_button:hover{
+    background: linear-gradient(90deg, rgba(255,86,112,1) 23%, rgba(255,106,61,1) 100%);
+}

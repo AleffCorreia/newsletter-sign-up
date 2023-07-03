@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/global.css">
     <link rel="stylesheet" href="src/css/main.css">
     <title>Newsletter</title>
 </head>
@@ -20,7 +21,7 @@
 
             <div class="info_container container">
                 <div class="info_titles">
-                    <h1 class="info_title">
+                    <h1 class="app_title">
                         Stay updated!
                     </h1>
                     <span class="info_subtitle">
@@ -44,11 +45,14 @@
                     </li>
                 </ul>
 
-                <form action="#" class="form_singup">
-                    <label for="email" class="form_singup-label">Email address</label>
+                <form novalidate onsubmit="return checkEmail()" class="form_singup" action="subscribe.html">
+                    <div class="input_labels">
+                        <label for="email" class="form_singup-label">Email address</label>
+                    <label for="email" class="form_singup-label" id="error_message">Valid email required</label>
+                    </div>
                     <input type="email" name="email" id="email" class="form_singup-input"
-                        placeholder="email@company.com">
-                    <button class="form_singup-button">Subcribe to monthly newsletter</button>
+                        placeholder="email@company.com" required>
+                    <button type="submit" class="primary_button">Subcribe to monthly newsletter</button>
                 </form>
             </div>
         </div>
