@@ -24,13 +24,7 @@ function checkEmail() {
 
 }
 
-function valueLocalStage() {
-    let email = localStorage.getItem('localEmail')
 
-    if (email == null) {
-        email = ""
-    }
-}
 
 function addValueLocalStage(value) {
     let email = value;
